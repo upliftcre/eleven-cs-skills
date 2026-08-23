@@ -10,13 +10,13 @@ Each one matches a chapter. Install what you need, ignore the rest.
 
 Copy and paste this to your assistant:
 
-> Install the skills from https://github.com/[ORG]/eleven-cs-skills — download the repo, and put each folder inside `skills/` into my skills directory.
+> Install the skills from https://github.com/upliftcre/eleven-cs-skills — download the repo, and put each folder inside `skills/` into my skills directory.
 
 That's it. You don't need to know what a repo is.
 
 To install just one, name it:
 
-> Install the `c06-credibility` skill from https://github.com/[ORG]/eleven-cs-skills
+> Install the `c06-credibility` skill from https://github.com/upliftcre/eleven-cs-skills
 
 ---
 
