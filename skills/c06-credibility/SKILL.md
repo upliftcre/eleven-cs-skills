@@ -69,3 +69,13 @@ After delivering the draft:
 1. Confirm the numbers with them, explicitly, before they publish it.
 2. Ask whether they've requested a testimonial yet — the window is days after funding, not months.
 3. Ask what adjacent opportunity this closing surfaced. Neighboring owner, the seller's other holdings, the lender, the opposing broker. That's Chapter 12, and it's the half most advisors skip.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.

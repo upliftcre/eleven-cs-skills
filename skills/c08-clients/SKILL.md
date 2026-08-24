@@ -64,3 +64,13 @@ A direct question **can** cost a qualified prospect when the wording outruns the
 They will, and usually with *"but I could still win it."* The honest answer isn't that the prospect is bad. It's that an advisor carrying a bad pursuit doesn't lose an hourly rate — he loses the deal he would otherwise have been working, entirely, and he'll never know its name.
 
 The fast no with a referral attached is the cleanest professional gift in this business. It costs a coffee instead of a quarter, and it makes the person on the other end a referral source instead of a story about a broker who wasted their time.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.

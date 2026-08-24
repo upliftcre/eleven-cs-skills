@@ -69,3 +69,13 @@ That is the problem with Competency, and it is also the whole opportunity: it is
 Competency sits under everything else. Banking proof of expertise requires expertise to bank — a structured record amplifying shallow craft does not build authority, it accelerates exposure. Conversations convert on answers. Contracts close because someone in the room actually understands them.
 
 If they are strong everywhere else and Absent here, say so directly. The rest of the system will make a mediocre advisor findable faster, which is not a favor.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.

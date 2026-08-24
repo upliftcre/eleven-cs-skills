@@ -65,3 +65,13 @@ The fix is almost always Identity Match. It's unglamorous, it takes an afternoon
 ## Finish with the date
 
 Tell them to write the total and all five categories down with today's date, and re-run in ninety days. The number alone is close to meaningless. The direction across four quarters is one of the most useful things they'll know about their own practice.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.

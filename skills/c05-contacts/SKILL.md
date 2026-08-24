@@ -62,3 +62,13 @@ Whichever source is thinnest is next week's prospecting assignment. That is dive
 They will, in the first month. Listen to what the objection is defending: maintenance-by-feel, the system that starved their best contacts while feeding whoever called last.
 
 The discomfort is not evidence the ledger is wrong. It is evidence they are replacing instinct with instrumentation, and that feels like a demotion for about four weeks.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.

@@ -68,3 +68,13 @@ If they run deals with a team or inside a brokerage, ask a harder question: is t
 Splits in writing. Referral fees documented before the introduction, not after the check arrives. Co-listing arrangements papered while everyone is friendly — documentation drafted during goodwill is cheap, and the same document after a dispute is litigation.
 
 And when they are the senior party, write it down first anyway. Advisors remember who paid cleanly and who had to be chased.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.

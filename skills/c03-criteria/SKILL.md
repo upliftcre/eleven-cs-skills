@@ -59,3 +59,13 @@ No judgment — measurement. The gap is next quarter's prospecting map.
 Tell them plainly: **do not bank the old transactions.** Bank the market instead — corridor analysis, submarket commentary, what the interchange does to three parcels, which sites the sewer extension unlocked. Commercial judgment demonstrated without a commercial transaction claimed, and available this week.
 
 **New to the industry:** they are choosing on a blank page, which nobody else gets. Pick narrow — narrow enough that a decade of attention would genuinely exhaust it — and accumulate there from week one. Take whatever work comes; they should. But accumulate in one place.
+
+## The workbook rule
+
+If the advisor uses the companion workbook, **never write to the .xlsx file.**
+
+Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+
+Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+
+If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
