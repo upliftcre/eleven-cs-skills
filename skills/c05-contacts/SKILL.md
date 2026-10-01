@@ -1,5 +1,5 @@
 ---
-name: activity-ledger
+name: c05-contacts
 description: Run the Friday sort and maintain the relationship ledger for a commercial real estate advisor — velocity, touch cadence and source mix from Chapter 7 of The Eleven C's. Use when someone mentions their contacts, database or CRM, asks who to follow up with, says referrals have dried up, wonders where their pipeline went, or wants to log people they met this week.
 ---
 
@@ -63,12 +63,30 @@ They will, in the first month. Listen to what the objection is defending: mainte
 
 The discomfort is not evidence the ledger is wrong. It is evidence they are replacing instinct with instrumentation, and that feels like a demotion for about four weeks.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C5 Contacts tab
+
+- Ledger, rows 49–68 (twenty rows): B Contact · C Source category, one of "Past client", "Professional referral partner", "Center of influence", "Self-generated" · D Date added · E Last meaningful touch · F Note. If the ledger is full, tell them. Never paste below row 68.
+- C12 Contact Velocity (new qualified contacts this week) · C14 "On standard" or "Below standard" · C16 Date measured
+- C22 Touch Cadence · C24 "On standard" or "Below standard" · C26 Date measured
+- Referral-Source Mix, % of pipeline as plain numbers: C41 Past clients · C42 Professional referral partners · C43 Centers of influence · C44 Self-generated · C34 Date measured. C45 is calculated.
+- The Feeder tab, weekly log rows 23–48: B Week ending · C Letters sent · D Emails sent · E Calls made · F Replies entered in the ledger · J Note. G, H and I are calculated.
+- History log on this tab, rows 77–84. One row each time they re-measure: B Date · C Value, which is new qualified contacts added that week (count) · E Note. Column D is calculated.

@@ -1,5 +1,5 @@
 ---
-name: closing-conversion
+name: c10-closings
 description: Run the post-closing protocol for a commercial real estate advisor — the deposit and the adjacent-opportunity contact, both within seven days, from Chapter 12 of The Eleven C's. Use when someone says a deal funded or closed, mentions collecting a commission, or asks what to do after a transaction is finished.
 ---
 
@@ -22,7 +22,7 @@ The testimonial requested a month later arrives after the glow cooled. The adjac
 
 ## Action one — the deposit
 
-Convert the closing into proof: a written case record, dated, published where it can be found. Invoke the credibility-deposit skill if it is available; otherwise draft it here against the five elements — named problem, a decision only expertise explains, verifiable outcome, date and market tag, a findable home.
+Convert the closing into proof: a written case record, dated, published where it can be found. Invoke the c06-credibility skill if it is available; otherwise draft it here against the five elements — named problem, a decision only expertise explains, verifiable outcome, date and market tag, a findable home.
 
 Draft it within days while the numbers are still exact. Request the testimonial while gratitude is warm, and name the moment you want described: *"Would you mind mentioning the pricing conversation from our first meeting?"* A client asked seven days after funding says yes. The same client asked two quarters later says "sure, send me something," which means nothing arrives.
 
@@ -73,12 +73,29 @@ And when a closing genuinely produces neither, write down why. A pattern of dry 
 
 Three hours across a week, against a closing that took months. The most expensive work of their year deserves its cheapest follow-through.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C10 Closings tab
+
+- C20 Closing (property, date funded) · C21 Deposit made within one week? "Yes" or "No" · C22 Adjacent opportunity contacted within one week? "Yes" or "No"
+- C15 Date measured
+- G30–G34 Contacted?: "Yes" or "No". G30 The seller's portfolio · G31 The neighboring owners and tenants · G32 The lender · G33 The opposing broker · G34 The client's own network
+- The deposit itself goes in the C6 Credibility deposit log, rows 22–33: B Date · C Deposit description · E Lane tag · F Location published.
+- History log on this tab, rows 55–62. One row each time they re-measure: B Date · C Value, which is "Both", "One of two" or "Neither" for the most recent closing · E Note. Column D is calculated.

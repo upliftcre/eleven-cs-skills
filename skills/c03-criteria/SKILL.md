@@ -1,5 +1,5 @@
 ---
-name: market-authority-sentence
+name: c03-criteria
 description: Build and test a commercial real estate advisor's Market Authority Sentence — the place they own, stated in one sentence — from Chapter 5 of The Eleven C's. Use when someone talks about their specialty or niche, asks how to describe what they do, mentions picking a lane or an asset class, or is deciding what market to focus on.
 ---
 
@@ -60,12 +60,28 @@ Tell them plainly: **do not bank the old transactions.** Bank the market instead
 
 **New to the industry:** they are choosing on a blank page, which nobody else gets. Pick narrow — narrow enough that a decade of attention would genuinely exhaust it — and accumulate there from week one. Take whatever work comes; they should. But accumulate in one place.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C3 Criteria tab
+
+- C19 The Market Authority Sentence, exactly as they say it out loud · C20 The honest version of what they chase today · C21 "Choice" or "Accident"
+- G24–G27 Pass?: "Yes" or "No" for the tracker's four clauses. G24 A place, resolved · G25 Authority, claimed · G26 Asset focus follows · G27 Out loud, without hedging
+- C14 Date measured
+- History log on this tab, rows 39–46. One row each time they re-measure: B Date · C Value, which is "Pass" or "Fail" · E Note. Column D is calculated.

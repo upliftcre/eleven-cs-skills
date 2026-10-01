@@ -1,5 +1,5 @@
 ---
-name: commitment-baseline
+name: c01-commitment
 description: Run the Stability Baseline and the Fail-to-First goal math for a commercial real estate advisor — Chapter 3 of The Eleven C's. Use when someone is setting goals, planning a year, talking about a slow quarter, mentions cash flow or runway, says they are chasing deals they shouldn't, or asks where to start with the framework.
 ---
 
@@ -61,12 +61,31 @@ The stability word with its date, evidence, and Monday action. Then the four lev
 
 Tell them to write the commitment as one sentence with a three-year date on it, and to re-check the baseline every quarter.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C1 Commitment tab
+
+- Stability Baseline: "Yes" in exactly one of F23 (Cash reserves), F24 (Health), F25 (Relationships), F26 (Geography). "No" in the other three. G23–G26 Date noted. C16 Date measured.
+- C28 One sentence of evidence · C29 The shoring action
+- C41 Current value: closings as a percentage of the database (plain number) · C44 Date measured
+- Four-lever math: C52 The Thousand (count) · C53 Close rate (plain number, 1 = 1%) · C54 Average deal size (dollars) · C55 Fee rate (plain number, 2 = 2%). C56 and C57 are calculated.
+- C59 The number · C61 The milestones · C63 The identity · C65 The decision filter
+- G69–G73 Done?: "Yes" or "No" for the five implementation actions, in order
+- History log on this tab, rows 82–89. One row each time they re-measure: B Date · C Value, which is closings as a percentage of the database (plain number, 2 = 2%) · E Note. Column D is calculated.

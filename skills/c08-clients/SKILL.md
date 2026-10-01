@@ -1,5 +1,5 @@
 ---
-name: qualification-filter
+name: c08-clients
 description: Run the eight-check qualification filter on a commercial real estate prospect before any proposal goes out — from Chapter 10 of The Eleven C's. Use when an advisor describes a new prospect, asks whether to pursue something, mentions a proposal or pitch, wonders if a deal is real, or is deciding where to spend their time.
 ---
 
@@ -65,12 +65,31 @@ They will, and usually with *"but I could still win it."* The honest answer isn'
 
 The fast no with a referral attached is the cleanest professional gift in this business. It costs a coffee instead of a quarter, and it makes the person on the other end a referral source instead of a story about a broker who wasted their time.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C8 Clients tab
+
+- C20 Prospect name. The tab holds one prospect at a time.
+- E22–E29 Pass?: "Yes" or "No". Check 0 is E22, Check 7 is E29.
+- F22–F29 In the prospect's own words
+- C15 Date measured
+- Exclusive Ratio: C43 Exclusive engagements (active) · C44 Total active engagements · C45 "Rising", "Falling" or "Flat" · C37 "On standard" or "Below standard" · C39 Date measured. C35 is calculated.
+- G56–G59 On roster?: "Yes" or "No" for the four capacity-drain client types
+- History log on this tab, rows 67–74. One row each time they re-measure: B Date · C Value, which is the Exclusive Ratio (plain number, 40 = 40%) · E Note. Column D is calculated.

@@ -1,5 +1,5 @@
 ---
-name: conversation-ledger
+name: c07-conversations
 description: Log meaningful business conversations by source, compute the inbound ratio, and run the pre-flight check before any outbound campaign — Chapter 9 of The Eleven C's. Use when an advisor is planning a mailer or outreach, mentions prospecting or cold calling, asks whether marketing is working, or wants to log conversations from the week.
 ---
 
@@ -64,12 +64,29 @@ Ask where they are, because the marching orders differ:
 
 The mix changes forever. The discipline does not.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C7 Conversations tab
+
+- Source log, rows 30–37, one row per week: B Week ending · C outbound-touched · D inbound-lookup · E referral · F walk-in. G is calculated.
+- C14 Conversations self-assessment: "On standard" or "Below standard" · C16 Date measured
+- C21 This month's inbound ratio, for this month only, not ninety days (plain number, 35 = 35%) · C23 Ratio self-assessment: "On standard" or "Below standard" · C25 Date measured
+- Pre-flight, G41–G43 Pass?: "Yes" or "No". G41 Does the record support the claim? · G42 Is it current? · G43 Would it convert you? · C44 Date the pre-flight last ran
+- History log on this tab, rows 58–65. One row each time they re-measure: B Date · C Value, which is meaningful business conversations that week (count) · E Note. Column D is calculated.

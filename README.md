@@ -76,7 +76,7 @@ That constraint is deliberate and it comes from the book: an inflated record is 
 
 ## Also in the set
 
-**The workbook.** An Excel companion holding the ledgers these skills read and write against — thirteen tabs, and a dashboard that computes the backward trace off the other tabs automatically.
+**The tracker.** *The Eleven C's Tracker* (`10-eleven-cs-tracker.xlsx`, in the book's System Folder download) — fourteen tabs, one per C plus a dashboard that scores itself. The skills never write to it. They hand you a paste-ready block that names the tab and the cell, and you paste it.
 
 **The book.** These skills assume its arguments. They work without it, but the *why* lives there.
 

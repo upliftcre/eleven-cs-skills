@@ -1,5 +1,5 @@
 ---
-name: lookup-audit
+name: c04-capabilities
 description: Run and score the look-me-up moment — what AI assistants and search actually say about a commercial real estate advisor, scored 0-100 as the Lookup Index from Chapter 6 of The Eleven C's. Use when someone asks what AI says about them, wants to check their online presence, mentions being findable or invisible, asks about AI visibility, or wants to know why owners aren't calling.
 ---
 
@@ -66,12 +66,29 @@ The fix is almost always Identity Match. It's unglamorous, it takes an afternoon
 
 Tell them to write the total and all five categories down with today's date, and re-run in ninety days. The number alone is close to meaningless. The direction across four quarters is one of the most useful things they'll know about their own practice.
 
-## The workbook rule
+## The tracker rule
 
-If the advisor uses the companion workbook, **never write to the .xlsx file.**
+The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-Its formulas feed a dashboard across thirteen tabs, and a library will write straight through Excel's sheet protection without warning. A clobbered formula produces no error — it produces a wrong number that looks right.
+**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
 
-Output a paste-ready block instead. Tell them which tab and which column, and let them paste it. That takes them four seconds and it cannot break anything.
+Give them a paste-ready block instead, every time:
 
-If they explicitly ask you to write the file anyway, say what the risk is first, and tell them to run `verify_repair.py --repair` afterwards.
+- One line per value, in this shape: `Tab › Cell · Label: value`.
+- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
+- In a log, use the next empty row. Leave no blank rows between entries.
+- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
+- Percentages go in as plain numbers: 2 means 2%.
+- Dates go in as dates: 2026-10-01.
+
+If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+
+If they don't use the tracker, skip the block. The instrument still runs.
+
+### Where it goes: the C4 Capabilities tab
+
+- Lookup Index, F54–F58 Score 0–20: F54 Identity Match · F55 Readable Authority · F56 Depth of Proof · F57 Market Association · F58 Freshness. G54–G58 and C59 are calculated.
+- C46 Self-assessment: "On standard" or "Below standard" · C48 Date measured
+- C60 Lead capture-to-response time
+- If they also run the infrastructure audit: G27–G32 (six human-facing lines) and G35–G39 (five machine-facing lines), each "exists", "exists-but-leaky" or "missing". C15 Date measured.
+- History log on this tab, rows 94–101. One row each time they re-measure: B Date · C Value, which is the Lookup Index total (0 to 100) · E Note. Column D is calculated.
