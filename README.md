@@ -76,7 +76,7 @@ That constraint is deliberate and it comes from the book: an inflated record is 
 
 ## Also in the set
 
-**The tracker.** *The Eleven C's Tracker* (`10-eleven-cs-tracker.xlsx`, in the book's System Folder download) — fourteen tabs, one per C plus a dashboard that scores itself. The skills never write to it. They hand you a paste-ready block that names the tab and the cell, and you paste it.
+**The tracker.** *The Eleven C's Tracker* (`10-eleven-cs-tracker.xlsx`, in the book's System Folder download) — fourteen tabs, one per C plus a dashboard that scores itself. When the skills can reach the file, they update it for you: only your own input cells, never a formula, with a dated backup first. When they can't, they hand you a paste-ready block that names the tab and the cell.
 
 **The book.** These skills assume its arguments. They work without it, but the *why* lives there.
 

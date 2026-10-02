@@ -68,20 +68,22 @@ The mix changes forever. The discipline does not.
 
 The advisor's workbook is **The Eleven C's Tracker**: `10-eleven-cs-tracker.xlsx`, from the book's System Folder download. It has fourteen tabs: Read Me, Dashboard, C1 to C11, and The Feeder.
 
-**Never write to the .xlsx file. There is no exception.** Not when they ask, not when they insist, not when they say they're busy. Calculated cells feed the Dashboard. A write can overwrite one without any warning, and a broken formula shows no error. It shows a wrong number that looks right.
+When you can reach the file, update it for them. Do these steps every time:
 
-Give them a paste-ready block instead, every time:
+1. **Write only to the cells in the map below.** Every other cell is a label or a calculation. Never put a value in one, even if they ask. A broken formula shows no error. It shows a wrong number that looks right.
+2. **Make a backup first.** Copy the file next to itself with today's date in the name, for example `10-eleven-cs-tracker-backup-2026-10-01.xlsx`. If the file is open in Excel, ask them to close it first.
+3. **Count the formulas before and after.** If the count changes, or you put a value in a cell that is not in the map, restore the backup and tell them. Saving can turn a few empty-text cells into blank cells. That is harmless, so ignore it.
+4. **Use the exact words.** Where the map shows words in quotes, use one of them exactly. That cell has a dropdown. Percentages go in as plain numbers: 2 means 2%. Dates go in as real dates, not text.
+5. **In a log, use the next empty row.** Leave no blank rows between entries.
+6. **Tell them what changed.** List each cell you wrote and its new value.
 
-- One line per value, in this shape: `Tab › Cell · Label: value`.
-- Use only the cells in the map below. Every other cell is a label or a calculation, so never put a value in one.
-- In a log, use the next empty row. Leave no blank rows between entries.
-- Where the map shows words in quotes, use one of them exactly. That cell has a dropdown.
-- Percentages go in as plain numbers: 2 means 2%.
-- Dates go in as dates: 2026-10-01.
+Use a tool that keeps formulas, such as openpyxl in Python. Never save the file in a mode that keeps only values.
 
-If they push back, say this once: *"Pasting takes you a few seconds. If I write the file, I can break a formula and neither of us would see it."* Then give the block again.
+If they uploaded the file in a chat and you can create files, return the updated copy. Tell them to replace their old file with it.
 
-If they don't use the tracker, skip the block. The instrument still runs.
+If you can't reach the file, give them a paste-ready block instead. Write one line per value, in this shape: `Tab › Cell · Label: value`.
+
+If they don't use the tracker, skip all of this. The instrument still runs.
 
 ### Where it goes: the C7 Conversations tab
 
